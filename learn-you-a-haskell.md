@@ -51,6 +51,7 @@
     * sum  list - return the sum of a list of numbers
     * product  list - return the product of a list of numbers
     * elem thing list - returns True if thing is an element contained in the list.
-
+## Comments
+ * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
 ## Errata Corrige
 * page 15 typo: hail instead of head
