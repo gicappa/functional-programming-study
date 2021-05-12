@@ -50,5 +50,7 @@
     * minimum  list - return the minimum element of the list (only for comparable types)
     * sum  list - return the sum of a list of numbers
     * product  list - return the product of a list of numbers
+    * elem thing list - returns True if thing is an element contained in the list.
+
 ## Errata Corrige
 * page 15 typo: hail instead of head
