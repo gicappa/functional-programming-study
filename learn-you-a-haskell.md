@@ -68,6 +68,8 @@
     *  repeat element - returns an infinit list of the same element
        * take 10 (repeat 5) == [5,5,5,5,5,5,5,5,5,5]
 ### List comprehension
+ * A list comprehension is composed by three parts: the output function, the input list and the predicate. The list comprehension is wrapped by squared brackets []
+    * [x*2 | x <- [1..10]] == [2,4,6,8,10,12,14,16,18,20]
 
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
