@@ -18,7 +18,7 @@
     * prefix: ex foo 1 2. The function name is prefixed before the paramenters
 * Function application (prefix functions with the parameters) has the highest precedence of operations (infix functions)  
 * If a function takes two parameters, we can also call it as an infix function by surrounding it with backticks. 
-    * 8 `div` 3
+    * ``8 `div` 3``
 * if statement it is an expression that is defined as a piece of code that returns a value. 
 * since it is an expression if statement must always have a then and an else. 
 * functions can’t begin with a capitalised letter. 
@@ -27,15 +27,15 @@
 * In Haskell lists are homogeneous data structure, they store elements of the same type.
 * let lostNumbers = [4 ,8 ,15 ,16 ,23 ,48] (in GHCi let assign a name to a value) creates a list 
 * ++ operator concatenate 2 lists and it walks through the list to concatenate with the second list (O(N)) 
-    * [1,2] ++ [9,10] == [1,2,9,10] 
+    * ``[1,2] ++ [9,10] == [1,2,9,10]``
 * : operator named cons prefix an element to the list and it is immediate (O(1)) 
-    * 5:[1 ,2 ,3 ,4 ,5] == [5,1,2,3,4,5] 
-* [1,2,3] is actually just syntactic sugar for 1:2:3:[]
-* If you want to get an element out of a list by index, use !!. The indices start at 0. 
-    * "Steve Buscemi" !! 6 — ‘B’
+    * ``5:[1 ,2 ,3 ,4 ,5] == [5,1,2,3,4,5]``
+* ``[1,2,3]`` is actually just syntactic sugar for ``1:2:3:[]``
+* If you want to get an element out of a list by index, use ``!!``. The indices start at 0. 
+    * ``"Steve Buscemi" !! 6 — ‘B’``
 * list of list must contain the same types
 * Lists can be compared if the stuff they contain can be compared. 
-    * [3,2,1] > [2,1,0] == True
+    * ``[3,2,1] > [2,1,0] == True``
 * function operating on the list
     * head list - returns the first element of a list
     * tail list -  returns the list without the first element 
@@ -53,20 +53,20 @@
     * elem thing list - returns True if thing is an element contained in the list.
 ### Texas ranges
  * Ranges are a way of making lists that are arithmetic sequences of elements that can be enumerated.
-    * [1..20] == [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    * [’a’..’z’] == "abcdefghijklmnopqrstuvwxyz"
+    * ``[1..20] == [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]``
+    * ``[’a’..’z’] == "abcdefghijklmnopqrstuvwxyz"``
  * Ranges can specify steps separating the first two elements with a comma and then specifying what the upper limit is:
-    * [2 ,4..20] == [2,4,6,8,10,12,14,16,18,20]
-    * [20,19..1] == [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+    * ``[2 ,4..20] == [2,4,6,8,10,12,14,16,18,20]``
+    * ``[20,19..1] == [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]``
  * Watch out when using floating point numbers:
-    * [0.1 , 0.3 .. 1] == [0.1 ,0.3 ,0.5 ,0.7 ,0.8999999999999999 ,1.0999999999999999]
+    * ``[0.1 , 0.3 .. 1] == [0.1 ,0.3 ,0.5 ,0.7 ,0.8999999999999999 ,1.0999999999999999]``
  * Do not specify the upper limit for infinite lists
-    * [13,26..]
+    * ``[13,26..]``
  * Functions that produce infinite lists:
     * cycle list - returns an infinite list cycling the list
-       * take 10 (cycle [1,2,3]) == [1,2,3,1,2,3,1,2,3,1]
+       * ``take 10 (cycle [1,2,3]) == [1,2,3,1,2,3,1,2,3,1]``
     *  repeat element - returns an infinit list of the same element
-       * take 10 (repeat 5) == [5,5,5,5,5,5,5,5,5,5]
+       * ``take 10 (repeat 5) == [5,5,5,5,5,5,5,5,5,5]``
 ### List comprehension
  * A list comprehension is composed by three parts: the output function, the input list and the predicate. The list comprehension is wrapped by squared brackets []
     * [x\*2 | x <- [1..10], x <= 12] == [2,4,6,8,10,12]
