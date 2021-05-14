@@ -72,6 +72,10 @@
     * [x*2 | x <- [1..10], x <= 12] == [2,4,6,8,10,12]
     * [ x*y | x <- [2,5,10], y <- [8,10,11]] == [16 ,20 ,22 ,40 ,50 ,55 ,80 ,100 ,110] 
     * [ x*y | x <- [2,5,10], y <- [8,10,11], x*y > 50] == [55 ,80 ,100 ,110]
+ * When a list comprehension has multiple predicates an element must satisfy all of them
+    * [ x | x <- [10..20], x /= 13, x /= 15, x /= 19] == [10 ,11 ,12 ,14 ,16 ,17 ,18 ,20] 
+ * When a list comprehension has several lists comprehensions produce all combinations of the given lists and then join them by the output function we supply.
+    * [ x*y | x <- [2,5,10], y <- [8,10,11]] == [16 ,20 ,22 ,40 ,50 ,55 ,80 ,100 ,110]
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
 ## Errata Corrige
