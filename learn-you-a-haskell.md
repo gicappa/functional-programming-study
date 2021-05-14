@@ -8,10 +8,10 @@
 * Haskell uses a very good type system that has type inference. That means that you don’t have to explicitly label every piece of code with a type because the type system can intelligently figure out a lot about it. 
 * GHC and Hugs are Haskell compilers. GHCi : docker run -it --rm -v $PWD:/src  haskell:8
 ## Chapter 2
-* GHCi can perform math operations (+-*/) but beware negative numbers must be wrapped in parenthesis.
+* GHCi can perform math operations (``+-*/``) but beware negative numbers must be wrapped in parenthesis.
 * GHCi supports boolean algebra
-* the == operation can be applied to everything that has the same type 
-* the +-*/ operations apply only to numbers
+* the ``==`` operation can be applied to everything that has the same type 
+* the ``+-*/`` operations apply only to numbers
 ### Functions
 * functions can be 
     * infix: ex 1 + 2. The function name is specified in the middle of the parameters
@@ -26,9 +26,9 @@
 ### Lists
 * In Haskell lists are homogeneous data structure, they store elements of the same type.
 * let lostNumbers = [4 ,8 ,15 ,16 ,23 ,48] (in GHCi let assign a name to a value) creates a list 
-* ++ operator concatenate 2 lists and it walks through the list to concatenate with the second list (O(N)) 
+* ``++`` operator concatenate 2 lists and it walks through the list to concatenate with the second list (O(N)) 
     * ``[1,2] ++ [9,10] == [1,2,9,10]``
-* : operator named cons prefix an element to the list and it is immediate (O(1)) 
+* ``:`` operator named cons prefix an element to the list and it is immediate (O(1)) 
     * ``5:[1 ,2 ,3 ,4 ,5] == [5,1,2,3,4,5]``
 * ``[1,2,3]`` is actually just syntactic sugar for ``1:2:3:[]``
 * If you want to get an element out of a list by index, use ``!!``. The indices start at 0. 
