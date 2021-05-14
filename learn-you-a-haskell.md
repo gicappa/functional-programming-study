@@ -85,6 +85,8 @@
       * fst (8 ,11) == 8
     * snd pair - returns the second component of a pair
       * snd (8 ,11) == 11
+    * zip list list - It takes two lists and then zips them together into one list by joining the matching elements into pairs.
+      * zip [1,2,3,4,5] [5,5,5,5,5] == [(1 ,5) ,(2 ,5) ,(3 ,5) ,(4 ,5) ,(5 ,5)] 
     ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
 ## Errata Corrige
