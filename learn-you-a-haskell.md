@@ -37,20 +37,20 @@
 * Lists can be compared if the stuff they contain can be compared. 
     * ``[3,2,1] > [2,1,0] == True``
 * function operating on the list
-    * head list - returns the first element of a list
-    * tail list -  returns the list without the first element 
-    * last list -  returns the last element 
-    * init list -  returns a list without the last element
-    * length list -  returns the length of a list 
-    * null list -  checks if a list is empty
-    * reverse list -  returns a reversed list
-    * take num  list - returns a list with the first num element of the original list.
-    * drop num  list - returns a list without the first num element of the original list.
-    * maximum  list - return the maximum element of the list (only for comparable types)
-    * minimum  list - return the minimum element of the list (only for comparable types)
-    * sum  list - return the sum of a list of numbers
-    * product  list - return the product of a list of numbers
-    * elem thing list - returns True if thing is an element contained in the list.
+    * __head__ _list_ - returns the first element of a list
+    * __tail__ _list_ -  returns the list without the first element 
+    * __last__ _list_ -  returns the last element 
+    * __init__ _list_ -  returns a list without the last element
+    * __length__ _list_ -  returns the length of a list 
+    * __null__ _list_ -  checks if a list is empty
+    * __reverse__ _list_ -  returns a reversed list
+    * __take__ _num list_ - returns a list with the first num element of the original list.
+    * __drop__ _num list_ - returns a list without the first num element of the original list.
+    * __maximum__ _list_ - return the maximum element of the list (only for comparable types)
+    * __minimum__  _list_ - return the minimum element of the list (only for comparable types)
+    * __sum__ _list_ - return the sum of a list of numbers
+    * __product__ _list_ - return the product of a list of numbers
+    * __elem__ _thing list_ - returns True if thing is an element contained in the list.
 ### Texas ranges
  * Ranges are a way of making lists that are arithmetic sequences of elements that can be enumerated.
     * ``[1..20] == [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]``
@@ -63,31 +63,31 @@
  * Do not specify the upper limit for infinite lists
     * ``[13,26..]``
  * Functions that produce infinite lists:
-    * cycle list - returns an infinite list cycling the list
+    * __cycle__ _list_ - returns an infinite list cycling the list
        * ``take 10 (cycle [1,2,3]) == [1,2,3,1,2,3,1,2,3,1]``
-    *  repeat element - returns an infinit list of the same element
+    * __repeat__ _element_ - returns an infinit list of the same element
        * ``take 10 (repeat 5) == [5,5,5,5,5,5,5,5,5,5]``
 ### List comprehension
  * A list comprehension is composed by three parts: the output function, the input list and the predicate. The list comprehension is wrapped by squared brackets []
-    * [x\*2 | x <- [1..10], x <= 12] == [2,4,6,8,10,12]
-    * length’ xs = sum [1 | _ <- xs]
+    * ``[x\*2 | x <- [1..10], x <= 12] == [2,4,6,8,10,12]``
+    * ``length’ xs = sum [1 | _ <- xs]``
  * When a list comprehension has multiple predicates an element must satisfy all of them
-    * [ x | x <- [10..20], x /= 13, x /= 15, x /= 19] == [10 ,11 ,12 ,14 ,16 ,17 ,18 ,20] 
+    * ``[ x | x <- [10..20], x /= 13, x /= 15, x /= 19] == [10 ,11 ,12 ,14 ,16 ,17 ,18 ,20]``
  * When a list comprehension has several lists comprehensions produce all combinations of the given lists and then join them by the output function we supply.
-    * [ x\*y | x <- [2,5,10], y <- [8,10,11]] == [16 ,20 ,22 ,40 ,50 ,55 ,80 ,100 ,110]
-    * [ x\*y | x <- [2,5,10], y <- [8,10,11], x\*y > 50] == [55 ,80 ,100 ,110]
+    * ``[ x\*y | x <- [2,5,10], y <- [8,10,11]] == [16 ,20 ,22 ,40 ,50 ,55 ,80 ,100 ,110]``
+    * ``[ x\*y | x <- [2,5,10], y <- [8,10,11], x\*y > 50] == [55 ,80 ,100 ,110]``
 ### Tuples
   * Tuples store a predefined number of values that may be not homogeneus on the type. Tuples can't contain an infinite number of items.
   * Tuples can contain lists
   * A tuple with two elements is called pair.
   * functions operating on tuples:
-    * fst pair - returns the first component of a pair
-      * fst (8 ,11) == 8
-    * snd pair - returns the second component of a pair
-      * snd (8 ,11) == 11
-    * zip list list - It takes two lists and then zips them together into one list by joining the matching elements into pairs.
-      * zip [1,2,3,4,5] [5,5,5,5,5] == [(1 ,5) ,(2 ,5) ,(3 ,5) ,(4 ,5) ,(5 ,5)] 
-      * zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"] == [(5,"im"),(3,"a"),(2,"turtle")]
+    * __fst__ _pair_ - returns the first component of a pair
+      * ``fst (8 ,11) == 8``
+    * __snd__ _pair_ - returns the second component of a pair
+      * ``snd (8 ,11) == 11``
+    * __zip__ _list list_ - It takes two lists and then zips them together into one list by joining the matching elements into pairs.
+      * ``zip [1,2,3,4,5] [5,5,5,5,5] == [(1 ,5) ,(2 ,5) ,(3 ,5) ,(4 ,5) ,(5 ,5)]``
+      * ``zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"] == [(5,"im"),(3,"a"),(2,"turtle")]``
     ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
 ## Errata Corrige
