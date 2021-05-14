@@ -6,7 +6,7 @@
 * Haskell is lazy. That means that unless specifically told otherwise, Haskell won’t execute functions and calculate things until it’s really forced to show you a result. That goes well with referential transparency and it allows you to think of programs as a series of transformations on data. It allows cool things such as infinite data structures.
 * Haskell is statically typed. 
 * Haskell uses a very good type system that has type inference. That means that you don’t have to explicitly label every piece of code with a type because the type system can intelligently figure out a lot about it. 
-* GHC and Hugs are Haskell compilers. GHCi : docker run -it --rm -v $PWD:/src  haskell:8
+* GHC and Hugs are Haskell compilers. GHCi : ``docker run -it --rm -v $PWD:/src  haskell:8``
 ## Chapter 2
 * GHCi can perform math operations (``+-*/``) but beware negative numbers must be wrapped in parenthesis.
 * GHCi supports boolean algebra
