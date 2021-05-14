@@ -69,7 +69,8 @@
        * take 10 (repeat 5) == [5,5,5,5,5,5,5,5,5,5]
 ### List comprehension
  * A list comprehension is composed by three parts: the output function, the input list and the predicate. The list comprehension is wrapped by squared brackets []
-    * [x*2 | x <- [1..10], x <= 12] == [2,4,6,8,10,12]
+    * [x\*2 | x <- [1..10], x <= 12] == [2,4,6,8,10,12]
+    * length’ xs = sum [1 | _ <- xs]
  * When a list comprehension has multiple predicates an element must satisfy all of them
     * [ x | x <- [10..20], x /= 13, x /= 15, x /= 19] == [10 ,11 ,12 ,14 ,16 ,17 ,18 ,20] 
  * When a list comprehension has several lists comprehensions produce all combinations of the given lists and then join them by the output function we supply.
