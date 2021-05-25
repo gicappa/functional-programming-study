@@ -91,6 +91,11 @@
 ## Chapter 3 - Type and Typeclasses
  * Haskell has a static type system with type inference.
  * A type is a kind of label that every expression has.
+ * Square brackets denotes a list 
+    * [Char] is of type *List of char* 
+    * (True, ’a’) is of different type than (True, 2)
+ * Functions also have types. When writing our own functions, we can choose to give them an explicit type declaration.
+ *    
 
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
