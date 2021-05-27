@@ -89,8 +89,10 @@
       * ``zip [1,2,3,4,5] [5,5,5,5,5] == [(1 ,5) ,(2 ,5) ,(3 ,5) ,(4 ,5) ,(5 ,5)]``
       * ``zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"] == [(5,"im"),(3,"a"),(2,"turtle")]``
 ## Chapter 3 - Type and Typeclasses
- * Haskell has a static type system with type inference.
  * A type is a kind of label that every expression has.
+ * Haskell has a static type system with type inference.
+ * Explicit types starts with a letter in capital case.
+ * ``::`` can be read as "has type off" and when using ``:t`` command in GHCi it separate the value from its type.
  * Square brackets denotes a list 
     * [Char] is of type *List of char* 
     * (True, ’a’) is of different type than (True, 2)
@@ -103,7 +105,7 @@
     * Bool: boolean (True, False)
     * Char: represents a character. It’s denoted by single quotes. A list of characters is a string.
     * (): Empty tuple is a unit
-
+ * 
 
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
