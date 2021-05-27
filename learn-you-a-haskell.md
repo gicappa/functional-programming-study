@@ -122,6 +122,8 @@
   * ``Show`` used for types that can be represented as strings. The functions to be implemented is ``show`` that takes a generice type and returns a string.
   * ``Read`` used for types that can return a type from a ``String``. The function to be implemented is ``read``. ```read :: (Read a) => String -> a```
       * Example:  ```read "8.2" + 3.8``` returns ```12.0```.
+  * ``Enum`` used for types sequentially ordered that can be enumerated. It can be used in list ranges in which are defined predecessor and successor with the ``pred`` and ``succ`` functions.
+      * Types in this class: ``(), Bool, Char, Ordering, Int, Integer, Float and Double.
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
 ## Errata Corrige
