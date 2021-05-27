@@ -117,8 +117,11 @@
  * Basic typeclasses:
     * ``Eq`` used for type supporting equality. It force to implement the functions ``==`` and ``/=``.
     * ``Ord`` is for types suppoprting ordering. ```(>) :: (Ord a) => a -> a -> Bool```.
-      * Functions: ``>, <, >=`` and ``<=``. The ``compare`` function takes two ``Ord`` members and return an ``Ordering`` type that is represented by ``GT``, ``LT``, ``EQ``.
-
+      * Functions: ``>, <, >=`` and ``<=``. The ``compare`` function takes two ``Ord`` members and return an ``Ordering`` type that is represented by ``GT``, ``LT``, ``EQ``.\
+      * To be member of ``Ord`` a type must be also member of ``Eq``.
+  * ``Show`` used for types that can be represented as strings. The functions to be implemented is ``show`` that takes a generice type and returns a string.
+  * ``Read`` used for types that can return a type from a ``String``. The function to be implemented is ``read``. ```read :: (Read a) => String -> a```
+      * Example:  ```read "8.2" + 3.8``` returns ```12.0```.
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
 ## Errata Corrige
