@@ -98,14 +98,16 @@
     * (True, ’a’) is of different type than (True, 2)
  * Functions also have types. When writing our own functions, we can choose to give them an explicit type declaration.
  * Common types in Haskell:
-    * Int: bounded integer with a minumum and a maximum
+    * Int: bounded integer with a minumum and a maximum (for 32bits machines 2147483647 -2147483648).
     * Integer: unbounded integer for really big numbers but less efficient than Int.
     * Float: real floating point with single precision
     * Double: real floating point with double precision
     * Bool: boolean (True, False)
-    * Char: represents a character. It’s denoted by single quotes. A list of characters is a string.
-    * (): Empty tuple is a unit
- * 
+    * Char: represents a character. It’s denoted by single quotes. A list of characters is a String.
+    * (): Empty tuple with a single value
+### Type Variables
+ * Type varaibles are variable that can be any possible type. They are similar to the generics concepts and allow to write generic functions that are not using any specific behabvior of the type.
+ * Function that have type variabgles are called **polimorphic functions**.
 
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
