@@ -92,9 +92,9 @@
  * A type is a kind of label that every expression has.
  * Haskell has a static type system with type inference.
  * Explicit types starts with a letter in capital case.
- * ``::`` can be read as "has type off" and when using ``:t`` command in GHCi it separate the value from its type.
+ * ``::`` can be read as "has type of" and when using ``:t`` command in GHCi it separate the value from its type.
  * Square brackets denotes a list 
-    * [Char] is of type *List of char* 
+    * []Char is of type *List of char* 
     * (True, ’a’) is of different type than (True, 2)
  * Functions also have types. When writing our own functions, we can choose to give them an explicit type declaration.
  * Common types in Haskell:
