@@ -108,6 +108,16 @@
 ### Type Variables
  * Type varaibles are variable that can be any possible type. They are similar to the generics concepts and allow to write generic functions that are not using any specific behabvior of the type.
  * Function that have type variabgles are called **polimorphic functions**.
+### Typeclasses
+ * A typeclass is similar to an interface that defines a behavior of a class. 
+    * if a type is a part of a typeclass than it supports and implements the behavior that the typeclass describes
+ * If a function is comprised only of special characters, it’s considered an infix function by default.
+ * Everything before the => symbol is called a class constraint.
+    * Example: equals function ```(==) :: (Eq a) => a -> a -> Bool``` that means: the equality function takes any two values that are of the same type and returns a Bool. The type of those two values must be a member of the Eq class (this was the class constraint).
+ * Basic typeclasses:
+    * ``Eq`` used for type supporting equality. It force to implement the functions ``==`` and ``/=``.
+    * ``Ord`` is for types suppoprting ordering. ```(>) :: (Ord a) => a -> a -> Bool```.
+      * Functions: ``>, <, >=`` and ``<=``. The ``compare`` function takes two ``Ord`` members and return an ``Ordering`` type that is represented by ``GT``, ``LT``, ``EQ``.
 
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
