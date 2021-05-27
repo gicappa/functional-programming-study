@@ -1,13 +1,13 @@
 # Learn You a Haskell for Great Good! 
 
-## Chapter 1
+## Chapter 1 - Functional Programming
 * In purely functional programming you don’t tell the computer what to do as such but rather you tell it what stuff is. 
 * So in purely functional languages, a function has no side-effects. The only thing a function can do is calculate something and return it as a result. That’s called referential transparency 
 * Haskell is lazy. That means that unless specifically told otherwise, Haskell won’t execute functions and calculate things until it’s really forced to show you a result. That goes well with referential transparency and it allows you to think of programs as a series of transformations on data. It allows cool things such as infinite data structures.
 * Haskell is statically typed. 
 * Haskell uses a very good type system that has type inference. That means that you don’t have to explicitly label every piece of code with a type because the type system can intelligently figure out a lot about it. 
 * GHC and Hugs are Haskell compilers. GHCi : ``docker run -it --rm -v $PWD:/src  haskell:8``
-## Chapter 2
+## Chapter 2 - Functions
 * GHCi can perform math operations (``+-*/``) but beware negative numbers must be wrapped in parenthesis.
 * GHCi supports boolean algebra
 * the ``==`` operation can be applied to everything that has the same type 
