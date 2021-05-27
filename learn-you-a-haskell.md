@@ -119,13 +119,17 @@
     * ``Ord`` is for types suppoprting ordering. ```(>) :: (Ord a) => a -> a -> Bool```.
       * Functions: ``>, <, >=`` and ``<=``. The ``compare`` function takes two ``Ord`` members and return an ``Ordering`` type that is represented by ``GT``, ``LT``, ``EQ``.\
       * To be member of ``Ord`` a type must be also member of ``Eq``.
-  * ``Show`` used for types that can be represented as strings. The functions to be implemented is ``show`` that takes a generice type and returns a string.
-  * ``Read`` used for types that can return a type from a ``String``. The function to be implemented is ``read``. ```read :: (Read a) => String -> a```
+    * ``Show`` used for types that can be represented as strings. The functions to be implemented is ``show`` that takes a generice type and returns a string.
+    * ``Read`` used for types that can return a type from a ``String``. The function to be implemented is ``read``. ```read :: (Read a) => String -> a```
       * Example:  ```read "8.2" + 3.8``` returns ```12.0```.
-  * ``Enum`` used for types sequentially ordered that can be enumerated. It can be used in list ranges in which are defined predecessor and successor with the ``pred`` and ``succ`` functions.
-      * Types in this class: ``(), Bool, Char, Ordering, Int, Integer, Float and Double.
+    * ``Enum`` used for types sequentially ordered that can be enumerated. It can be used in list ranges in which are defined predecessor and successor with the ``pred`` and ``succ`` functions.
+      * Types in this class: ``(), Bool, Char, Ordering, Int, Integer, Float and Double.``
+    * ``Bounded`` useed for types with an upper and lower bound. The functions to be implemented are ``minBound`` and ``maxBound``.
+      *  ``minBound :: (Bounded a) => a`` and ``maxBound :: (Bounded a) => a`` are **polimorphic constants** since they return always the same value and they take no argument.
+    * ``Num`` is a numeric typeclass and is used for types that have a property to act like numbers. Since the signature is ``(Num t) => t`` also number are **polimorphic constants**
 ## Comments
  * The book avoid cautiously the word **object**. When it needs to describe the instance of a type, it uses **stuff**, **things**,etc. but never objects. It feels a bit weird to read at page 15: _"Lists can be compared if the stuff they contain can be compared."_ or at page 10: _"Whereas + works only on things that are considered numbers, == works on any two things that can be compared."_
+ * At page 31: _"To join Num, a type must already be friends with Show and Eq."_ in this context "to be friend with" is very unclear and qualitative. I can understand on my own that there is a releationship (so that a number is also abe to be transformed into a string and so printed and can support equality) but it's not expressed how. Coming from an OOP world I can imagine inheritance that I don't think it is the case I it is misleading me.
 ## Errata Corrige
 * page 15 (typo): hail instead of head
 * page 25 (old info): Unlike Java or Pascal, Haskell has type inference.
